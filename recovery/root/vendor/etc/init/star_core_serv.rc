@@ -1,0 +1,9 @@
+service star_core_serv /vendor/bin/hw/star_core_serv
+    class early_hal
+    socket star_core_serv stream 660 root system
+    user root
+    group root system
+    seclabel u:r:recovery:s0
+
+on init
+    start star_core_serv

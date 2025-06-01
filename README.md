@@ -1,0 +1,1 @@
+# TWRP device tree for Meizu 21Pro

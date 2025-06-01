@@ -1,0 +1,249 @@
+{
+    "boot_starts": [
+        {
+            "type": "sync",
+            "command": []
+        },
+        {
+            "type": "async",
+            "command": []
+        },
+        {
+            "type": "async",
+            "command": []
+        },
+        {
+            "type": "async",
+            "command": []
+        }
+    ],
+    "modules": [
+        {
+            "name": "test",
+            "cmd": {
+                "name": "libcmd_test.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_test.so",
+                "arguments": {}
+            },
+            "88001AA1": {
+                "cmd": {
+                    "name": "libcmd_test.so",
+                    "arguments": {
+                        "path": "/dev/sys/mod_test",
+                        "type": 1,
+                        "value": 0.999
+                    }
+                },
+                "hal": {
+                    "name": "libhal_test.so",
+                    "arguments": {
+                        "path": "/dev/sys/mod_test",
+                        "offset": 10,
+                        "size": 100,
+                        "isStart": true
+                    }
+                }
+            }
+        },
+        {
+            "name": "tp",
+            "cmd": {
+                "name": "libcmd_tp.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_tp.so",
+                "arguments": {
+                    "tp_name": "/sys/devices/platform/main_touch.0/tp_name",
+                    "autotest": "/proc/goodix_ts/auto_test",
+                    "openshot": "/sys/devices/platform/main_touch.0/get_rawdata"
+                }
+            }
+        },
+        {
+            "name": "audio",
+            "cmd": {
+                "name": "libcmd_audio.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_audio.so",
+                "arguments": {}
+            }
+        },
+        {
+            "name": "battery",
+            "cmd": {
+                "name": "libcmd_battery.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_battery.so",
+                "arguments": {
+                    "battery_info": [
+                        {
+                            "capacity": "/sys/class/power_supply/battery/capacity",
+                            "temp": "/sys/class/power_supply/battery/temp",
+                            "current_now": "/sys/class/power_supply/battery/current_now",
+                            "voltage_now": "/sys/class/power_supply/battery/voltage_now",
+                            "charge_type": "/sys/class/power_supply/battery/charge_type",
+                            "health": "/sys/class/power_supply/battery/health",
+                            "cycle_count": "/sys/class/power_supply/battery/cycle_count",
+                            "type": "/sys/class/power_supply/battery/type"
+                        }
+                    ],
+                    "usb": {
+                        "voltage_now": "/sys/class/power_supply/usb/voltage_now",
+                        "temp": "/sys/class/power_supply/usb/temp",
+                        "current_now": "/sys/class/power_supply/usb/current_now",
+                        "usb_type": "/sys/class/power_supply/usb/usb_type",
+                        "type": "/sys/class/power_supply/usb/type"
+                    },
+                    "wireless": {
+                        "voltage_now": "/sys/class/power_supply/wireless/voltage_now",
+                        "temp": "/sys/class/power_supply/wireless/temp",
+                        "current_now": "/sys/class/power_supply/wireless/current_now",
+                        "type": "/sys/class/power_supply/wireless/type"
+                    },
+                    "usb_real_type": "/sys/class/qcom-battery/usb_real_type",
+                    "cmd_discharging": "/sys/class/meizu/charger/cmd_discharging",
+                    "battery_soh": "/sys/class/meizu/charger/soh"
+                }
+            }
+        },
+        {
+            "name": "camera",
+            "cmd": {
+                "name": "libcmd_camera.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_camera.so",
+                "arguments": {}
+            }
+        },
+        {
+            "name": "display",
+            "cmd": {
+                "name": "libcmd_display.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_display.so",
+                "arguments": {
+                    "panel_info": "sys/kernel/display_drivers/panel_info",
+                    "hbm": "sys/kernel/display_drivers/hbm",
+                    "mura_recovery": "/sys/kernel/display_drivers/mura_recovery"
+                }
+            }
+        },
+        {
+            "name": "light",
+            "cmd": {
+                "name": "libcmd_light.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_light.so",
+                "arguments": {
+                    "backlight": "sys/class/backlight/panel0-backlight/brightness"
+                }
+            }
+        },
+        {
+            "name": "sensor",
+            "cmd": {
+                "name": "libcmd_sensor.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_sensor.so",
+                "arguments": {}
+            }
+        },
+        {
+            "name": "storage",
+            "cmd": {
+                "name": "libcmd_storage.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_storage.so",
+                "arguments": {
+                    "health": "/sys/devices/platform/soc/1d84000.ufshc/ufs_health/health",
+                    "vendor_name": "/sys/block/sda/device/vendor",
+                    "page_poison": "/sys/class/meizu/stability/page_poison"
+                }
+            }
+        },
+        {
+            "name": "security",
+            "cmd": {
+                "name": "libcmd_security.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_security.so",
+                "arguments": {}
+            }
+        },
+        {
+            "name": "ctags",
+            "cmd": {
+                "name": "libcmd_ctags.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_ctags.so",
+                "arguments": {}
+            }
+        },
+        {
+            "name": "soc",
+            "cmd": {
+                "name": "libcmd_soc.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_soc.so",
+                "arguments": {
+                    "thermal": [
+                        {
+                            "name": "cpu0",
+                            "node": "/sys/class/thermal/thermal_zone47/temp"
+                        },
+                        {
+                            "name": "ap",
+                            "node": "/sys/class/thermal/thermal_zone92/temp"
+                        },
+                        {
+                            "name": "ddr",
+                            "node": "/sys/class/thermal/thermal_zone55/temp"
+                        },
+                        {
+                            "name": "board",
+                            "node": "/sys/class/thermal/thermal_zone100/temp"
+                        }
+                    ],
+                    "rf_id": "proc/mz_info/rf_id",
+                    "stability_test": "/sys/class/meizu/stability/stability_test",
+                    "msm_vidc_debug": "/sys/module/msm_video/parameters/msm_vidc_debug"
+                }
+            }
+        },
+        {
+            "name": "sclog",
+            "cmd": {
+                "name": "libcmd_sclog.so",
+                "arguments": {}
+            },
+            "hal": {
+                "name": "libhal_sclog.so",
+                "arguments": {}
+            }
+        }
+    ]
+}
