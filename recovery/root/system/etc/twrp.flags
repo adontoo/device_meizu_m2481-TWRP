@@ -45,6 +45,8 @@
 
 /odm                   erofs   odm                                                                flags=display="Odm"
 /product               erofs   product                                                            flags=display="Product"
+/system                erofs   system                                                             flags=display="System"
 /system_ext            erofs   system_ext                                                         flags=display="System_ext"
 /system_dlkm           erofs   system_dlkm                                                        flags=display="System_dlkm"
+/vendor                erofs   vendor                                                             flags=display="Vendor"
 /vendor_dlkm           erofs   vendor_dlkm                                                        flags=display="Vendor_dlkm"
