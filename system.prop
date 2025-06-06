@@ -2,12 +2,7 @@
 ro.adb.secure=0
 ro.boot.dynamic_partitions=true
 
-# Gatekeeper
-vendor.gatekeeper.disable_spu=true
-vendor.gatekeeper.is_security_level_spu=0
-
 # Battery Property
 ro.charger.enable_suspend=1
 
-# SPR Support
-vendor.display.enable_spr=1
+ro.postinstall.fstab.prefix=/system

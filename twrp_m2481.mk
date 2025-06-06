@@ -10,7 +10,7 @@ DEVICE_PATH := device/meizu/m2481
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := m2481
+PRODUCT_RELEASE_NAME := meizu21Pro
 
 ## Device identifier
 PRODUCT_DEVICE := m2481
@@ -24,5 +24,5 @@ TARGET_OTA_ASSERT_DEVICE := $(PRODUCT_RELEASE_NAME)
 
 # Theme
 TW_STATUS_ICONS_ALIGN := center
-#TW_Y_OFFSET := 111
-#TW_H_OFFSET := -111
+TW_Y_OFFSET := 111
+TW_H_OFFSET := -111

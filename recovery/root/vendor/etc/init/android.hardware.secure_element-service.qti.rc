@@ -4,5 +4,5 @@ service vendor.secure_element /vendor/bin/hw/android.hardware.secure_element-ser
     group nfc root
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin:/odm/lib64
     disabled
-    seclabel u:r:recovery:s0
+    seclabel u:object_r:hal_secure_element_default_exec:s0
     

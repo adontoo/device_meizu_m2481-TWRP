@@ -25,6 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on early-init
+    restorecon /postinstall
+
 on init
     start vendor.boot-qti
 
@@ -47,7 +50,7 @@ on fs
     install_keyring
 
 on boot
-    setprop sys.usb.config adb
+    setprop sys.usb.config mtp,adb
 
 on property:twrp.modules.loaded=true
     # Mount debugfs
@@ -67,10 +70,10 @@ on property:twrp.modules.loaded=true
     umount /firmware
 
 on property:hwservicemanager.ready=true
-    #start vendor.qseecomd
-    #start vendor.keymint-qti
+    start vendor.qseecomd
+    start vendor.keymint-qti
 
 on property:vendor.sys.listeners.registered=true
-    #start vendor.gatekeeper_default
-    #start vendor.secure_element
+    start vendor.gatekeeper_default
+    start vendor.secure_element
     #start vendor.keymint-strongbox

@@ -5,3 +5,5 @@ service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-serv
     task_profiles ServiceCapacityLow
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin:/odm/lib64
+    seclabel u:object_r:hal_sensors_default_exec:s0

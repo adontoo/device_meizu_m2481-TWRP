@@ -6,7 +6,7 @@ service vendor.health-default /vendor/bin/hw/android.hardware.health-service.qti
     file /dev/kmsg w
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin:/odm/lib64
     disabled
-    seclabel u:r:recovery:s0
+    seclabel u:r:hal_health_default:s0
 
 service vendor.charger /vendor/bin/hw/android.hardware.health-service.qti --charger
     class charger
@@ -17,4 +17,4 @@ service vendor.charger /vendor/bin/hw/android.hardware.health-service.qti --char
     file /dev/kmsg w
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin:/odm/lib64
     disabled
-    seclabel u:r:recovery:s0
+    seclabel u:r:hal_health_default:s0

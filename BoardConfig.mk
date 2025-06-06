@@ -25,7 +25,7 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Battery
-TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
+TW_USE_LEGACY_BATTERY_SERVICES := true
 
 # Bootloader
 PRODUCT_PLATFORM := pineapple
@@ -173,9 +173,5 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko goodix_ts.ko qti_battery_charger.ko nxp-nci.ko stm_st54se_gpio.ko stm_nfc_i2c.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone47/temp" # CPU-0-0-0
-TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 TW_BACKUP_EXCLUSIONS := /data/fonts
-TW_STATUS_ICONS_ALIGN := center
-TW_Y_OFFSET := 99
-TW_H_OFFSET := -99
 TW_DEVICE_VERSION := Meizu_21Pro-A14
