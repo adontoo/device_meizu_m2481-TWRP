@@ -25,7 +25,7 @@ service vibratorfeature-hal-service /vendor/bin/hw/vendor.qti.hardware.vibrator.
     setenv ENV_RICHTAP_CONFIG_PATH /vendor/etc/aac_richtap.config
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin
     disable
-    seclabel u:r:recovery:s0
+    seclabel u:object_r:hal_vibrator_default_exec:s0
 
 on property:sys.boot_completed=1
     setprop vendor.haptic.calibrate.done 1

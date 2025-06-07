@@ -27,6 +27,7 @@
 
 on early-init
     restorecon /postinstall
+    setenforce 0
 
 on init
     start vendor.boot-qti
