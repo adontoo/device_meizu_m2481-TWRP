@@ -1,10 +1,13 @@
-<!--
-    Input:
-        vendor/qcom/proprietary/qcril-nr/qcril_qmi/android.hardware.secure_element.xml
+<!--/*
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
 -->
 <manifest version="1.0" type="device">
     <hal format="aidl">
         <name>android.hardware.secure_element</name>
+        <version>1</version>
         <fqname>ISecureElement/SIM1</fqname>
         <fqname>ISecureElement/SIM2</fqname>
     </hal>

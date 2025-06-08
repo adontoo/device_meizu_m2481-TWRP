@@ -4,5 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_m2481.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/twrp_m2481.mk
+
+COMMON_LUNCH_CHOICES := twrp_m2481-eng

@@ -83,6 +83,6 @@ void vendor_load_properties() {
 	property_override("ro.build.date.utc", "1672502400");
 	const std::string sku = GetProperty("ro.boot.hardware.sku", "");
 	if (sku == "m2481") {
-		model_property_override("m2481", "m2481", "Meizu 21Pro");
+		model_property_override("m2481", "m2481", "meizu21Pro");
     }
 }
