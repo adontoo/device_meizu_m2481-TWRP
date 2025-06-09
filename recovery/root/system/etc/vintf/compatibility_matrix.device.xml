@@ -1,17 +1,10 @@
 <!--
     Input:
-        vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
-        vendor/meizu/interfaces/vendor_framework_compatibility_matrix.xml
-        vendor/xingji/interfaces/vendor_framework_compatibility_matrix.xml
+        vendor_framework_compatibility_matrix.xml
+        vendor_framework_compatibility_matrix.xml
+        vendor_framework_compatibility_matrix.xml
 -->
 <compatibility-matrix version="4.0" type="framework">
-    <hal format="aidl" optional="true">
-        <name>android.hardware.authsecret.qti.spu</name>
-        <interface>
-            <name>IAuthSecret</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.automotive.evs</name>
         <version>1.1</version>
@@ -30,8 +23,6 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.biometrics.fingerprint</name>
-        <version>1</version>
-        <version>2</version>
         <interface>
             <name>IFingerprint</name>
             <instance>default</instance>
@@ -47,13 +38,6 @@
             <instance>gnss_vendor</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.graphics.allocator</name>
-        <interface>
-            <name>IAllocator</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.media.c2</name>
         <version>1.0</version>
@@ -67,13 +51,6 @@
     <hal format="hidl" optional="true">
         <name>android.hardware.nfc</name>
         <version>1.0</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.nfc</name>
         <interface>
             <name>INfc</name>
             <instance>default</instance>
@@ -98,13 +75,6 @@
         <version>1.0-1</version>
         <interface>
             <name>IRadioConfig</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.tetheroffload</name>
-        <interface>
-            <name>IOffload</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -187,21 +157,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.aks.gamepad</name>
-        <version>1.0</version>
-        <interface>
-            <name>IGamepad</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.anc.fingerprint.extension</name>
-        <interface>
-            <name>IFingerprintExtension</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.display.color</name>
         <version>1.0-7</version>
         <interface>
@@ -223,22 +178,6 @@
         <version>1.0</version>
         <interface>
             <name>IDisplayPostproc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.goodix.hardware.biometrics.fingerprint</name>
-        <version>2.1</version>
-        <interface>
-            <name>IGoodixFingerprintDaemon</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.meizu.hardware.aw_light</name>
-        <version>1.0</version>
-        <interface>
-            <name>IAwLight</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -283,14 +222,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.meizu.hardware.smart_scene</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISmartScene</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.meizu.hardware.tiktap_hidl</name>
         <version>1.0</version>
         <interface>
@@ -315,26 +246,12 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.nxp.nxpnfc_aidl</name>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.nxp.nxpnfclegacy</name>
         <version>1.0</version>
         <interface>
             <name>INxpNfcLegacy</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.ImsRtpService</name>
-        <interface>
-            <name>IRTPService</name>
-            <instance>ImsRtpService</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -348,14 +265,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.data.factory</name>
         <version>1.0</version>
-        <version>2.0-8</version>
-        <interface>
-            <name>IFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.data.factoryservice</name>
+        <version>2.0-7</version>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
@@ -363,7 +273,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.data.txpwrservice</name>
-        <version>1-6</version>
+        <version>1-2</version>
         <interface>
             <name>ITxPwrService</name>
             <instance>default</instance>
@@ -390,7 +300,7 @@
         <version>1.0-2</version>
         <version>2.0-1</version>
         <version>3.0</version>
-        <version>4.0-2</version>
+        <version>4.0-1</version>
         <interface>
             <name>ILocHidlGnss</name>
             <instance>gnss_vendor</instance>
@@ -398,7 +308,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.gnss</name>
-        <version>1-5</version>
+        <version>1-2</version>
         <interface>
             <name>ILocAidlGnss</name>
             <instance>default</instance>
@@ -428,25 +338,11 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.alarm</name>
-        <interface>
-            <name>IAlarm</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.audiohalext</name>
         <version>1.0</version>
         <interface>
             <name>IAudioHalExt</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.bluetooth.xpanprovider</name>
-        <interface>
-            <name>IXpanProvider</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -477,7 +373,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.bttpi</name>
-        <version>1-3</version>
+        <version>1-2</version>
         <interface>
             <name>IBtTpi</name>
             <instance>default</instance>
@@ -491,33 +387,12 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.cacertaidlservice</name>
-        <interface>
-            <name>IService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.camera.aon</name>
-        <version>1.0-4</version>
+        <version>1.0-3</version>
         <interface>
             <name>IAONService</name>
             <instance>aoncameraservice</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.camera.aon</name>
-        <interface>
-            <name>IAONService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.camera.offlinecamera</name>
-        <interface>
-            <name>IOfflineCameraService</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -569,14 +444,6 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.data.connectionaidl</name>
-        <interface>
-            <name>IDataConnection</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.data.connectionfactory</name>
         <interface>
             <name>IFactory</name>
@@ -587,14 +454,6 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.data.iwlan</name>
         <version>1.0-1</version>
-        <interface>
-            <name>IIWlan</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.data.iwlandata</name>
         <interface>
             <name>IIWlan</name>
             <instance>slot1</instance>
@@ -617,13 +476,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.debugutils</name>
-        <interface>
-            <name>IDebugUtils</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.allocator</name>
         <version>1.0</version>
@@ -634,34 +486,18 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.display.color</name>
-        <interface>
-            <name>IDisplayColor</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.composer</name>
         <version>2.0-1</version>
         <version>3.0</version>
         <version>3.1</version>
-        <version>3.2</version>
         <interface>
             <name>IQtiComposer</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.display.composer3</name>
-        <interface>
-            <name>IQtiComposer3Client</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.display.config</name>
-        <version>1-10</version>
         <version>1-5</version>
         <interface>
             <name>IDisplayConfig</name>
@@ -677,13 +513,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.display.demura</name>
-        <interface>
-            <name>IDemuraFileFinder</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.display.mapper</name>
         <version>2.0</version>
@@ -691,20 +520,6 @@
         <version>4.0</version>
         <interface>
             <name>IQtiMapper</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.display.postproc</name>
-        <interface>
-            <name>IDisplayPostproc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.dpmaidlservice</name>
-        <interface>
-            <name>IDpmService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -740,23 +555,9 @@
             <instance>embmsslServer0</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.embmssl</name>
-        <interface>
-            <name>IEmbms</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.factory</name>
         <version>1.0-1</version>
-        <interface>
-            <name>IFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.factory</name>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
@@ -767,13 +568,6 @@
         <version>1.0</version>
         <interface>
             <name>IQtiExtendedFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.fingerprint</name>
-        <interface>
-            <name>IQfpExtendedFingerprint</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -791,6 +585,30 @@
         <interface>
             <name>IFstManager</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.improvetouch.blobmanager</name>
+        <version>1.0</version>
+        <interface>
+            <name>IBlobManager</name>
+            <instance>BlobManagerService</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.improvetouch.gesturemanager</name>
+        <version>1.0</version>
+        <interface>
+            <name>IGestureManager</name>
+            <instance>GestureManagerService</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITouchCompanion</name>
+            <instance>TouchCompanionService</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -817,13 +635,6 @@
             <instance>MwqemAdapter</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.mwqemadapteraidlservice</name>
-        <interface>
-            <name>IMwqemAdapter</name>
-            <instance>MwqemAdapter</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.pal</name>
         <version>1.0</version>
@@ -840,23 +651,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.perf2</name>
-        <interface>
-            <name>IPerf</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.power.powermodule</name>
         <version>1.0</version>
-        <interface>
-            <name>IPowerModule</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.power.powermodule</name>
         <interface>
             <name>IPowerModule</name>
             <instance>default</instance>
@@ -878,13 +675,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.qconfig</name>
-        <interface>
-            <name>IQConfig</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.qdutils_disp</name>
         <version>1.0</version>
@@ -901,20 +691,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.qseecom</name>
-        <interface>
-            <name>IQSEECom</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.qspa</name>
-        <interface>
-            <name>IQspa</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.qteeconnector</name>
         <version>1.0</version>
@@ -928,41 +704,37 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.qteeconnector</name>
+        <name>vendor.qti.hardware.qxr</name>
         <interface>
-            <name>IAppConnector</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IGPAppConnector</name>
+            <name>IQXRCoreService</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.qxr</name>
-        <version>1-2</version>
-        <interface>
-            <name>IQXRAudioService</name>
-            <instance>default</instance>
-        </interface>
         <interface>
             <name>IQXRCamService</name>
             <instance>default</instance>
         </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
         <interface>
-            <name>IQXRCommService</name>
+            <name>IQXRSplitService</name>
             <instance>default</instance>
         </interface>
-        <interface>
-            <name>IQXRCoreService</name>
-            <instance>default</instance>
-        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
         <interface>
             <name>IQXRModService</name>
             <instance>default</instance>
         </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.qti.hardware.qxr</name>
         <interface>
-            <name>IQXRSplitService</name>
+            <name>IQXRAudioService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -990,16 +762,9 @@
             <instance>AtCmdFwdAidl</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.radio.atfwd</name>
-        <interface>
-            <name>IAtFwd</name>
-            <instance>AtFwdAidl</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1.0-9</version>
+        <version>1.0-8</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -1008,7 +773,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1-12</version>
+        <version>1-9</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -1033,14 +798,6 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.lpa</name>
         <version>1.0-3</version>
-        <interface>
-            <name>IUimLpa</name>
-            <instance>UimLpa0</instance>
-            <instance>UimLpa1</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.radio.lpa</name>
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
@@ -1076,7 +833,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.qtiradio</name>
-        <version>1-11</version>
+        <version>1-9</version>
         <interface>
             <name>IQtiRadioStable</name>
             <instance>slot1</instance>
@@ -1085,7 +842,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.qti.hardware.radio.qtiradioconfig</name>
-        <version>1-4</version>
+        <version>1-3</version>
         <interface>
             <name>IQtiRadioConfig</name>
             <instance>default</instance>
@@ -1100,14 +857,6 @@
             <instance>Uim1</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.radio.uim</name>
-        <interface>
-            <name>IUim</name>
-            <instance>Uim0</instance>
-            <instance>Uim1</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
         <version>1.0</version>
@@ -1117,25 +866,9 @@
             <instance>uimRemoteClient1</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.radio.uim_remote_client</name>
-        <interface>
-            <name>IUimRemoteServiceClient</name>
-            <instance>uimRemoteClient0</instance>
-            <instance>uimRemoteClient1</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
         <version>1.0</version>
-        <interface>
-            <name>IUimRemoteServiceServer</name>
-            <instance>uimRemoteServer0</instance>
-            <instance>uimRemoteServer1</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.radio.uim_remote_server</name>
         <interface>
             <name>IUimRemoteServiceServer</name>
             <instance>uimRemoteServer0</instance>
@@ -1163,32 +896,24 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.seccam</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISecCam</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.secureprocessor.device</name>
         <version>1.0</version>
         <interface>
             <name>ISecureProcessor</name>
             <instance>qti-tee</instance>
-            <instance>qti-tvm</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.secureprocessor.device</name>
-        <interface>
-            <name>ISecureProcessor</name>
-            <instance>qti-tee</instance>
-            <instance>qti-tvm</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.sensorscalibrate</name>
         <version>1.0</version>
-        <interface>
-            <name>ISensorsCalibrate</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.sensorscalibrate</name>
         <interface>
             <name>ISensorsCalibrate</name>
             <instance>default</instance>
@@ -1197,13 +922,6 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.servicetracker</name>
         <version>1.0-2</version>
-        <interface>
-            <name>IServicetracker</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.servicetrackeraidl</name>
         <interface>
             <name>IServicetracker</name>
             <instance>default</instance>
@@ -1222,21 +940,6 @@
         <version>1.0</version>
         <interface>
             <name>ISoter</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.soter</name>
-        <interface>
-            <name>ISoter</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.spu</name>
-        <version>1-2</version>
-        <interface>
-            <name>ISPUManager</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -1260,17 +963,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.systemhelperaidl</name>
-        <interface>
-            <name>ISystemEvent</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ISystemResource</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.trustedui</name>
         <version>1.0-2</version>
@@ -1283,17 +975,6 @@
             <name>ITrustedUI</name>
             <instance>default</instance>
             <instance>qtee-vm</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.trustedui</name>
-        <interface>
-            <name>ITrustedInput</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ITrustedUI</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -1311,13 +992,6 @@
         <interface>
             <name>IHidlVppService</name>
             <instance>vppService</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.vpp</name>
-        <interface>
-            <name>IVppService</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -1352,13 +1026,6 @@
             <instance>wificfr</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.wifi.wificfr</name>
-        <interface>
-            <name>IWificfr</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.wifi.wifilearner</name>
         <version>1.0</version>
@@ -1370,13 +1037,6 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.wifi.wifimyftm</name>
         <version>1.0</version>
-        <interface>
-            <name>IWifiMyFtm</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.hardware.wifi.wifimyftm</name>
         <interface>
             <name>IWifiMyFtm</name>
             <instance>default</instance>
@@ -1450,13 +1110,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.ims.factoryaidlservice</name>
-        <interface>
-            <name>IImsFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.imsrtpservice</name>
         <version>3.0</version>
@@ -1464,13 +1117,6 @@
         <interface>
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.memory.pasrmanager</name>
-        <interface>
-            <name>IPasrManager</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -1497,30 +1143,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.qccvndhal_aidl</name>
-        <interface>
-            <name>IQccvndhal</name>
-            <instance>qccvndhal</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.qepi</name>
-        <interface>
-            <name>IQEPI</name>
-            <instance>qepi</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.qesdhal</name>
         <version>1.0-3</version>
-        <interface>
-            <name>IQesdhal</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.qesdhalaidl</name>
         <interface>
             <name>IQesdhal</name>
             <instance>default</instance>
@@ -1531,20 +1156,6 @@
         <version>1.0</version>
         <interface>
             <name>IQspmhal</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.qspmhal</name>
-        <interface>
-            <name>IQspmhal</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.qti.qvirt</name>
-        <interface>
-            <name>IVirtualizationService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -1565,13 +1176,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.rongcard.eid</name>
-        <interface>
-            <name>IEidDeviceAidl</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.rongcard.hardware.eid_rk</name>
         <version>1.0</version>
@@ -1581,25 +1185,8 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xingji.hal.starCore</name>
-        <version>1.0</version>
-        <interface>
-            <name>IStarCore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xingji.hal.starCore</name>
-        <version>1.1</version>
-        <interface>
-            <name>IStarCore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.xingji.hardware.biometrics.face</name>
         <version>1.0</version>
-        <version>1.1</version>
         <interface>
             <name>IBiometricsFace</name>
             <instance>default</instance>
@@ -1613,40 +1200,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.xj.hardware.wifi.supplicant</name>
-        <interface>
-            <name>ISupplicantXj</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.xjsd.hardware.fingerprint</name>
-        <version>2.1</version>
-        <interface>
-            <name>IXjsdFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.health</name>
-        <version>2.0</version>
-        <interface>
-            <name>IHealth</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-    <name>android.hardware.health</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-          <name>IHealth</name>
-          <instance>default</instance>
-        </interface>
-    </hal>
     <sepolicy>
         <kernel-sepolicy-version>30</kernel-sepolicy-version>
+        <sepolicy-version>28.0</sepolicy-version>
         <sepolicy-version>29.0</sepolicy-version>
         <sepolicy-version>30.0</sepolicy-version>
         <sepolicy-version>31.0</sepolicy-version>

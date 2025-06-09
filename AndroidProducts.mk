@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_m2481.mk
+	$(LOCAL_DIR)/twrp_m2481.mk

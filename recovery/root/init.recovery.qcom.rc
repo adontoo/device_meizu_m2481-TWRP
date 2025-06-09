@@ -25,10 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on early-init
-    restorecon /postinstall
-    setenforce 0
-
 on init
     start vendor.boot-qti
 
@@ -51,7 +47,7 @@ on fs
     install_keyring
 
 on boot
-    setprop sys.usb.config mtp,adb
+    setprop sys.usb.config adb
 
 on property:twrp.modules.loaded=true
     # Mount debugfs
@@ -67,14 +63,16 @@ on property:twrp.modules.loaded=true
     write /sys/kernel/boot_adsp/ssr 1
     wait /sys/class/power_supply/battery
     start vendor.health-default
-    start vibratorfeature-hal-service
     umount /firmware
 
 on property:hwservicemanager.ready=true
     start vendor.qseecomd
+    start qseecom-service
     start vendor.keymint-qti
+    start vendor.keymint-spu-qti
 
 on property:vendor.sys.listeners.registered=true
     start vendor.gatekeeper_default
+    start vendor.gatekeeper_spu
     start vendor.secure_element
-    #start vendor.keymint-strongbox
+    start vendor.qti.vibrator

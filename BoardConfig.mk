@@ -112,10 +112,10 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
 # Crypto
-TW_INCLUDE_CRYPTO := false
-TW_INCLUDE_CRYPTO_FBE := false
-TW_INCLUDE_FBE_METADATA_DECRYPT := false
-BOARD_USES_QCOM_FBE_DECRYPTION := false
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
 BOARD_USES_METADATA_PARTITION := true
 TW_USE_FSCRYPT_POLICY := 2
 PLATFORM_VERSION := 99.87.36
@@ -162,15 +162,13 @@ TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 4095
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := zh_CN
-TW_DEFAULT_BRIGHTNESS := 3515
+TW_DEFAULT_BRIGHTNESS := 2048
 TW_EXCLUDE_APEX := true
 TW_HAS_EDL_MODE := true
-# TW_SUPPORT_INPUT_AIDL_HAPTICS := true
-# TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/vibratorfeature"
-# TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
+
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko goodix_ts.ko qti_battery_charger.ko nxp-nci.ko stm_st54se_gpio.ko stm_nfc_i2c.ko"
+TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko goodix_ts.ko cs_press_m68.ko cs_press_f71.ko qti_battery_charger.ko nxp-nci.ko stm_st54se_gpio.ko stm_nfc_i2c.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone47/temp" # CPU-0-0-0
 TW_BACKUP_EXCLUSIONS := /data/fonts

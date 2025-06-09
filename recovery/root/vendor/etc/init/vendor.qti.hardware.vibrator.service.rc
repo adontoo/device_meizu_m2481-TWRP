@@ -1,31 +1,21 @@
-on init
-    write /sys/class/leds/vibrator/trigger "transient"
-
 on late-init
-    chown system system /sys/class/qcom-haptics/primitive_duration
+    chown root root /sys/class/qcom-haptics/primitive_duration
     chmod 0600 /sys/class/qcom-haptics/primitive_duration
 
 on boot
     chmod 0666 /dev/aac_richtap_dev
-    chown system system /dev/aac_richtap_dev
-    chmod 0666 /sys/class/leds/vibrator_5f/f0_cali
-    chown system system /sys/class/leds/vibrator_5f/f0_cali
-    chown system system /sys/class/leds/vibrator/trigger
-    chown system system /sys/class/leds/vibrator/activate
-    chown system system /sys/class/leds/vibrator/brightness
-    chown system system /sys/class/leds/vibrator/duration
-    chown system system /sys/class/leds/vibrator/state
+    chown root root /dev/aac_richtap_dev
 
-service vibratorfeature-hal-service /vendor/bin/hw/vendor.qti.hardware.vibrator.service
+service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
     class hal
     user root
     group root input
     setenv RICHTAP_DEVICE_PATH  /dev/aac_richtap_dev
     # setenv RICHTAP_DEVICE_PATH  /dev/aac_richtap
-    setenv ENV_RICHTAP_CONFIG_PATH /vendor/etc/aac_richtap.config
+    setenv ENV_RICHTAP_CONFIG_PATH /odm/etc/aac_richtap.config
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin
-    disable
-    seclabel u:object_r:hal_vibrator_default_exec:s0
+    disabled
+    seclabel u:r:recovery:s0
 
 on property:sys.boot_completed=1
     setprop vendor.haptic.calibrate.done 1
