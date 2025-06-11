@@ -45,3 +45,6 @@ fastboot flash recovery_ab out/target/product/m2481/recovery.img
 ## Device picture
 
 ![Meizu 21Pro](https://fms.res.meizu.com/dms/2024/02/29/7d591b01-952f-4819-846d-379603a22221.png)
+
+## Donate Link(This device tree is modify from YukongA dada )
+https://afdian.com/a/YuKongA
