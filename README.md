@@ -21,11 +21,11 @@ Camera  | 50MP (main), 10MP (floating telephoto), 13MP (ultra-wide), 32MP (front
 ## Features
 Not works:
 - [ ] Decryption
-- [ ] Vibrator
 
 Works:
 - [X] ADB
 - [X] Display
+- [X] Vibrator
 - [X] Flashing
 - [X] Sideload
 - [X] Fasbootd
