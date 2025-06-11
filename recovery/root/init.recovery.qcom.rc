@@ -26,6 +26,8 @@
 #
 
 on init
+    setprop prepdecrypt.setpatch true
+    setprop prepdecrypt.loglevel 2
     start vendor.boot-qti
 
 on early-fs
@@ -76,3 +78,5 @@ on property:vendor.sys.listeners.registered=true
     start vendor.gatekeeper_spu
     start vendor.secure_element
     start vendor.qti.vibrator
+
+import /init.recovery.qcom_decrypt.rc
