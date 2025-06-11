@@ -25,7 +25,9 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Battery
-TW_USE_LEGACY_BATTERY_SERVICES := true
+#TW_USE_LEGACY_BATTERY_SERVICES := true
+TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
+TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 
 # Bootloader
 PRODUCT_PLATFORM := pineapple
