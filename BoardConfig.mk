@@ -165,11 +165,11 @@ TW_DEFAULT_LANGUAGE := zh_CN
 TW_DEFAULT_BRIGHTNESS := 2048
 TW_EXCLUDE_APEX := true
 TW_HAS_EDL_MODE := true
-
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko goodix_ts.ko cs_press_m68.ko cs_press_f71.ko qti_battery_charger.ko nxp-nci.ko stm_st54se_gpio.ko stm_nfc_i2c.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone47/temp" # CPU-0-0-0
 TW_BACKUP_EXCLUSIONS := /data/fonts
-TW_DEVICE_VERSION := Meizu_21Pro-A14
+TW_DEVICE_VERSION := Meizu_21Pro-A15
