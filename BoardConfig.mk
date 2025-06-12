@@ -147,6 +147,10 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 # Fastbootd
 TW_INCLUDE_FASTBOOTD := true
 
+# SCREEN_TOUCH_MAPPING
+TW_SCREEN_TOUCH_X := 1368
+TW_SCREEN_TOUCH_Y := 3192
+
 # Other TWRP Configurations
 TW_THEME := portrait_hdpi
 TW_FRAMERATE := 120
@@ -172,6 +176,6 @@ TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko goodix_ts.ko cs_press_m68.ko cs_press_f71.ko qti_battery_charger.ko nxp-nci.ko stm_st54se_gpio.ko stm_nfc_i2c.ko"
 TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone47/temp" # CPU-0-0-0
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone47/temp"
 TW_BACKUP_EXCLUSIONS := /data/fonts
-TW_DEVICE_VERSION := Meizu_21Pro-A15
+TW_DEVICE_VERSION := Meizu_21Pro
