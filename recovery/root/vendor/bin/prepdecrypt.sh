@@ -343,7 +343,8 @@ if [ "$sdkver" -ge 26 ]; then
 		BUILDPROP="build.prop"
 		TEMPSYS=/s
 		syspath="/dev/block/mapper/system$suffix"
-		if [ ! -f "/dev/block/mapper/system$suffix"]; then
+		if [ ! -e "/dev/block/mapper/system$suffix"]; then
+			log_print 2 "No system mapper found. Trying by-name..."
     		syspath="/dev/block/bootdevice/by-name/system$suffix"
 		fi
 
@@ -352,8 +353,9 @@ if [ "$sdkver" -ge 26 ]; then
 			MNT_VENDOR=true
 			TEMPVEN=/v
 			venpath="/dev/block/mapper/vendor$suffix"
-			if [ ! -f "/dev/block/mapper/vendor$suffix"]; then
-    			venpath="/dev/block/bootdevice/by-name/vendor$suffix"
+			if [ ! -e "/dev/block/mapper/vendor$suffix"]; then
+    			log_print 2 "No vendor mapper found. Trying by-name..."
+				venpath="/dev/block/bootdevice/by-name/vendor$suffix"
 			fi
 
 			temp_mount "$TEMPVEN" "vendor" "$venpath"
@@ -403,6 +405,11 @@ if [ "$sdkver" -ge 26 ]; then
 		fi
 
 		temp_mount "$TEMPSYS" "system" "$syspath"
+		if [ ! -f "$TEMPSYS/$BUILDPROP" ]; then
+			log_print 2 "/s Build.prop does not exist! Trying /system_root..."
+			TEMPSYS=/system_root
+			temp_mount "$TEMPSYS" "system" "$syspath"
+		fi
 
 		if [ -f "$TEMPSYS/$BUILDPROP" ]; then
 			log_print 2 "Build.prop exists! Reading system properties from build.prop..."
@@ -451,6 +458,8 @@ if [ "$sdkver" -ge 26 ]; then
 				log_print 2 "Current vendor is Nougat or older. Skipping vendor security patch level setting..."
 				finish
 			fi
+		else
+			finish_error
 		fi
 	fi
 else
