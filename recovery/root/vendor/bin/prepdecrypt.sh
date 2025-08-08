@@ -178,7 +178,10 @@ check_dynamic()
 {
 	dynamic_partitions=$(getprop ro.boot.dynamic_partitions)
 	if [ "$dynamic_partitions" = "true" ]; then
-		unset suffix
+		if [[ ! -e "/dev/block/mapper/system$suffix" && ! -e "/dev/block/mapper/vendor$suffix" ]]; then
+			log_print 1 "/dev/block/mapper/system$suffix and /dev/block/mapper/vendor$suffix not Found! unset suffix"
+    		unset suffix
+		fi
 	fi
 }
 
@@ -339,13 +342,19 @@ if [ "$sdkver" -ge 26 ]; then
 
 		BUILDPROP="build.prop"
 		TEMPSYS=/s
-		syspath="/dev/block/bootdevice/by-name/system$suffix"
+		syspath="/dev/block/mapper/system$suffix"
+		if [ ! -f "/dev/block/mapper/system$suffix"]; then
+    		syspath="/dev/block/bootdevice/by-name/system$suffix"
+		fi
 
 		if [ "$sdkver" -ge 29 ]; then
 			SAR=true
 			MNT_VENDOR=true
 			TEMPVEN=/v
-			venpath="/dev/block/bootdevice/by-name/vendor$suffix"
+			venpath="/dev/block/mapper/vendor$suffix"
+			if [ ! -f "/dev/block/mapper/vendor$suffix"]; then
+    			venpath="/dev/block/bootdevice/by-name/vendor$suffix"
+			fi
 
 			temp_mount "$TEMPVEN" "vendor" "$venpath"
 
