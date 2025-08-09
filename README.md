@@ -34,12 +34,28 @@ Works:
 - [X] Decryption
 
 ## Build it yourself
-1. Fix touch screen mapping -> [commit](https://github.com/adontoo/android_bootable_recovery_twrp-14.1/commit/262b9affa0d40ebae92c1878a69005a7269aca06)
+```
+mkdir twrp && cd twrp
+repo init --depth=1 -u https://github.com/TWRP-Test/platform_manifest_twrp_aosp.git -b twrp-16.0
+repo sync
+git clone --depth=1 https://github.com/adontoo/device_meizu_m2481-TWRP device/meizu/m2481
+```
+
+Fix touch screen mapping -> [commit](https://github.com/adontoo/android_bootable_recovery_twrp-14.1/commit/262b9affa0d40ebae92c1878a69005a7269aca06)
+
+```
+source build/envsetup.sh
+lunch twrp_m2481
+m recoveryimage
+```
+
+If there is no error, recovery.img will be found in out/target/product/m2481/recovery.img
 
 ## How to use it
 
 ```
-fastboot flash recovery_ab out/target/product/m2481/recovery.img
+fastboot flash recovery_a out/target/product/m2481/recovery.img
+fastboot flash recovery_b out/target/product/m2481/recovery.img
 ```
 
 ## Device picture
