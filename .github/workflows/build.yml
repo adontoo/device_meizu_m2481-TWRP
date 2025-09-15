@@ -26,7 +26,7 @@ on:
       DEVICE_NAME:
         description: "Device name"
         required: true
-        default: "m2481"      
+        default: "m2481"
       LUNCH_TARGET:
         description: "lunch twrp_ (default same as device name)"
         required: false
@@ -48,8 +48,8 @@ jobs:
     steps:
     - name: Show build info
       run: |
-        echo "LUNCH_TARGET=${{{ github.event.inputs.LUNCH_TARGET || github.event.inputs.DEVICE_NAME }}}" >> "$GITHUB_ENV"
-        echo "RELEASE_NAME=${{{ github.event.inputs.RELEASE_NAME || github.event.inputs.DEVICE_NAME }}}" >> "$GITHUB_ENV"        
+        echo "LUNCH_TARGET=${{{ github.event.inputs.LUNCH_TARGET:-${{{{ github.event.inputs.DEVICE_NAME:-default_value }}}}}}" >> "$GITHUB_ENV"
+        echo "RELEASE_NAME=${{{ github.event.inputs.RELEASE_NAME:-${{{{ github.event.inputs.DEVICE_NAME:-default_value }}}}}}" >> "$GITHUB_ENV"
         {
           echo 'BUILD_INFO<<EOF'
           echo
