@@ -32,7 +32,7 @@ on:
         required: false
         default: ""
       RELEASE_NAME:
-        description: "Release name"
+        description: "Release name(replace xxx with TWRP-3.7.1-16-xxx)"
         required: false
         default: ""
       BUILD_PARTITION:
