@@ -48,7 +48,7 @@ jobs:
     steps:
     - name: Show build info
       run: |
-        echo "LUNCH_TARGET=${{{ github.event.inputs.LUNCH_TARGET:-${{{{ github.event.inputs.DEVICE_NAME:-default_value }}}}}}" >> "$GITHUB_ENV"
+        echo "LUNCH_TARGET=${{ github.event.inputs.LUNCH_TARGET || github.event.inputs.DEVICE_NAME }}" >> "$GITHUB_ENV"
         echo "RELEASE_NAME=${{{ github.event.inputs.RELEASE_NAME:-${{{{ github.event.inputs.DEVICE_NAME:-default_value }}}}}}" >> "$GITHUB_ENV"
         {
           echo 'BUILD_INFO<<EOF'
