@@ -4,8 +4,8 @@
 
 # mount point          fstype  device                                        device2              flags
 
-/metadata              f2fs    /dev/block/bootdevice/by-name/metadata                             flags=display="Metadata";backup=1;wrappedkey
-/data                  f2fs    /dev/block/bootdevice/by-name/userdata                             flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,metadata_encryption=aes-256-xts:wrappedkey_v0
+# Userdata/Metadata partitions
+/metadata              f2fs    /dev/block/bootdevice/by-name/metadata                             flags=display="Metadata";backup=1
 
 # Boot
 /boot                  emmc    /dev/block/bootdevice/by-name/boot                                 flags=backup=1;slotselect;flashimg=1
@@ -38,8 +38,6 @@
 /super                 emmc    /dev/block/bootdevice/by-name/super                                flags=backup=1;display="Super";flashimg=1
 
 # Logical partitions
-/odm                   erofs   odm                                                                flags=display="Odm"
-/product               erofs   product                                                            flags=display="Product"
 /system_ext            erofs   system_ext                                                         flags=display="System_ext"
 /system_dlkm           erofs   system_dlkm                                                        flags=display="System_dlkm"
 /vendor_dlkm           erofs   vendor_dlkm                                                        flags=display="Vendor_dlkm"
