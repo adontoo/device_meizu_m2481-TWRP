@@ -62,10 +62,10 @@ on property:twrp.modules.loaded=true
     wait /sys/class/power_supply/battery
     start vendor.health-default
     start vendor.qti.vibrator
-    umount /firmware
-
-on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
-    start prepdecrypt.vendor
+    umount /vendor
+    symlink /firmware /vendor/firmware_mnt
+    start override-spl
+    start vendor.secure_element
 
 on property:servicemanager.ready=true
     setprop sys.boot_completed 1

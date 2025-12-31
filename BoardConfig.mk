@@ -175,3 +175,4 @@ TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone47/temp"
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_DEVICE_VERSION := Meizu_21Pro
+TW_NO_NETWORK := true
