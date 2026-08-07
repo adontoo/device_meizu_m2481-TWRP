@@ -1,6 +1,0 @@
-service override-spl /vendor/bin/override-spl.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0

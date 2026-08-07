@@ -67,7 +67,6 @@ on property:twrp.modules.loaded=true
     start vendor.qti.vibrator
     umount /vendor
     symlink /firmware /vendor/firmware_mnt
-    start override-spl
     start vendor.secure_element
 
 on property:servicemanager.ready=true
