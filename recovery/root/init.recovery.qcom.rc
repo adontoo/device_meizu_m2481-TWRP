@@ -54,6 +54,7 @@ on boot
     setprop sys.usb.config adb
 
 on property:twrp.modules.loaded=true
+    start start_crypto_services
     # Mount firmware
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
